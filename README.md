@@ -4,9 +4,13 @@ A full-stack Django web app with 5+ core features, including user authentication
 
 #Recipe Management System
 
+![Screenshot 1](https://github.com/jawad-zaidi-026/Recipe-Management-System/blob/main/Screenshot%202025-02-22%20172122.png)
+
 #Description
 
 A full-stack Django web application that allows users to add, edit, delete, and search recipes. Features user authentication, password encryption, and image uploads for enhanced functionality. Designed with Bootstrap for a seamless UI.
+
+![Screenshot 2](https://github.com/jawad-zaidi-026/Recipe-Management-System/blob/main/Screenshot%202025-02-22%20172138.png)
 
 #Tech Stack
 
@@ -23,6 +27,9 @@ A full-stack Django web application that allows users to add, edit, delete, and 
 ✅ Image uploads for recipes
 ✅ Search functionality for quick access
 ✅ Responsive UI with Bootstrap
+
+![Screenshot 3](https://github.com/jawad-zaidi-026/Recipe-Management-System/blob/main/Screenshot%202025-02-22%20173939.png)
+![Screenshot 4](https://github.com/jawad-zaidi-026/Recipe-Management-System/blob/main/Screenshot%202025-02-22%20173955.png)
 
 #Installation Guide
 
@@ -49,10 +56,5 @@ python manage.py migrate
 python manage.py runserver
 
 #Open in browser: http://127.0.0.1:8000/
-
-![Screenshot 1](https://github.com/jawad-zaidi-026/Recipe-Management-System/blob/main/Screenshot%202025-02-22%20172122.png)
-![Screenshot 2](https://github.com/jawad-zaidi-026/Recipe-Management-System/blob/main/Screenshot%202025-02-22%20172138.png)
-![Screenshot 3](https://github.com/jawad-zaidi-026/Recipe-Management-System/blob/main/Screenshot%202025-02-22%20173939.png)
-![Screenshot 4](https://github.com/jawad-zaidi-026/Recipe-Management-System/blob/main/Screenshot%202025-02-22%20173955.png)
 
 #Feel Free to Explore and give Feedback
