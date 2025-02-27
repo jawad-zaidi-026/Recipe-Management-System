@@ -49,3 +49,10 @@ python manage.py migrate
 python manage.py runserver
 
 #Open in browser: http://127.0.0.1:8000/
+
+![Screenshot 1](https://github.com/jawad-zaidi-026/Recipe-Management-System/blob/main/Screenshot%202025-02-22%20172122.png)
+![Screenshot 2](https://github.com/jawad-zaidi-026/Recipe-Management-System/blob/main/Screenshot%202025-02-22%20172138.png)
+![Screenshot 3](https://github.com/jawad-zaidi-026/Recipe-Management-System/blob/main/Screenshot%202025-02-22%20173939.png)
+![Screenshot 4](https://github.com/jawad-zaidi-026/Recipe-Management-System/blob/main/Screenshot%202025-02-22%20173955.png)
+
+#Feel Free to Explore and give Feedback
