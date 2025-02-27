@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+<a href="/logout/" class="btn btn-outline-success me-2" type="button">Logout</a>
+{% endblock %}
+
+{% block content %}
+<div style="margin-top: 50px">
+  <form
+    style="
+      width: 50%;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    "
+    method="post"
+    enctype="multipart/form-data"
+  >
+    {% csrf_token %}
+    <h2 style="text-align: center; color: #000000">Add Recipe</h2>
+    <hr style="border-top: 2px solid #000" />
+
+    <div style="margin-bottom: 15px">
+      <label style="font-weight: bold; font-size: 1.2em; color: #000">Recipe Name</label>
+      <input
+        name="recipe_name"
+        required
+        type="text"
+        style="
+          width: 100%;
+          border: 2px solid #000;  
+          padding: 10px;
+          border-radius: 5px;
+          box-sizing: border-box;
+        "
+      />
+    </div>
+
+    <div style="margin-bottom: 15px">
+      <label style="font-weight: bold; font-size: 1.2em; color: #000">Recipe Description</label>
+      <textarea
+        name="recipe_description"
+        required
+        style="
+          width: 100%;
+          border: 2px solid #000;
+          padding: 10px;
+          border-radius: 5px;
+          box-sizing: border-box;
+        "
+      ></textarea>
+    </div>
+
+    <div style="margin-bottom: 15px">
+      <label style="font-weight: bold; font-size: 1.2em; color: #000">Recipe Image</label>
+      <input
+        name="recipe_image"
+        type="file"
+        required
+        style="
+          width: 100%;
+          border: 2px solid #000;
+          padding: 10px;
+          border-radius: 5px;
+          box-sizing: border-box;
+        "
+      />
+    </div>
+
+    <button
+      type="submit"
+      style="
+        width: 100%;
+        background-color: #117418;
+        color: #fff;
+        padding: 10px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      "
+    >
+      Add Recipe
+    </button>
+  </form>
+  <hr>
+  <!-- Search Form -->
+  <div style="margin-top: 30px;">
+    <form method="get" action="{% url 'recipes' %}">
+      <div style="display: flex; align-items: center;">
+        <input
+          name="search"
+          type="text"
+          placeholder="Search Recipe"
+          style="
+            width: 47%;
+            border: 2px solid #000;
+            padding: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-right: 10px;
+            margin-left: 350px;
+            margin-bottom: 30px;
+          "
+        />
+        <button type="submit" class="btn btn-primary" style="padding: 10px 20px; margin-bottom:30px">Search</button>
+      </div>
+    </form>
+  </div>
+
+  <style>
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .table, .table th, .table td {
+        border: 1px solid black;
+    }
+    .table th, .table td {
+        padding: 10px;
+        text-align: left;
+    }
+    .table th {
+        background-color: #f2f2f2;
+    }
+    .table img {
+        display: block;
+        margin: 0 auto;
+    }
+  </style>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Recipe name</th>
+        <th scope="col">Recipe description</th>
+        <th scope="col">Image</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for recipe in recipes %}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ recipe.recipe_name }}</td>
+        <td>{{ recipe.recipe_description }}</td>
+        <td>
+          <img src="/media/{{ recipe.recipe_image }}" style="height: 150px; ; width: 60%">
+        </td>
+        <td>
+          <a href="{% url 'delete_recipe' recipe.id %}" class="btn btn-danger" style="margin-top: 5px;">Delete</a>
+          <a href="{% url 'update_recipe' recipe.id %}" class="btn btn-success" style="margin-top: 5px;">Update</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

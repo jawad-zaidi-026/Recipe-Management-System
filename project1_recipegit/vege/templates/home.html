@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .hero-title {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+            color: #343a40;
+        }
+        .hero-subtitle {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+            color: #6c757d;
+        }
+        .hero-button {
+            font-size: 1.2em;
+            padding: 0.5em 2em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+        .hero-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <h1 class="hero-title">THIS IS A RECIPE PROJECT</h1>
+        <h2 class="hero-subtitle">CREATED BY JAWAD ZAIDI</h2>
+        <a href="/register/" class="hero-button">Register</a>
+    </div>
+</body>
+</html>
+
+{% endblock %}

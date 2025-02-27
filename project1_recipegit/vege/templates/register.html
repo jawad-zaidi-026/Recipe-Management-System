@@ -1,0 +1,70 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div style="margin-top: 50px">
+        <form
+            style="
+                width: 50%;
+                margin: 0 auto;
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            "
+            method="post"
+        >
+            {% csrf_token %}
+            <h1 style="text-align: center; color: #000000">Register</h1>
+            <hr style="border-top: 2px solid #000" />
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" style="font-weight: bold; font-size: 1.2em; color: #000">First name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="first_name" aria-describedby="emailHelp" style="border: 2px solid #000; padding: 10px; border-radius: 5px;">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" style="font-weight: bold; font-size: 1.2em; color: #000">Last name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="last_name" aria-describedby="emailHelp" style="border: 2px solid #000; padding: 10px; border-radius: 5px;">
+                
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label" style="font-weight: bold; font-size: 1.2em; color: #000">User name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp" style="border: 2px solid #000; padding: 10px; border-radius: 5px;">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label" style="font-weight: bold; font-size: 1.2em; color: #000">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password" style="border: 2px solid #000; padding: 10px; border-radius: 5px;">
+            </div>
+            <p>Already have account<a href="/login/"> Login</a></p>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; background-color: #117418; color: #fff; padding: 10px; font-size: 1.2em; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+        </form>
+        <div style="margin-top: 30px; width : 52% ; margin-left: 367px;">
+            {% if messages %}
+                <div class="container">
+                    {% for message in messages %}
+                        <div class="alert alert-info alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> -->
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    
+</body>
+
+
+{% endblock %}

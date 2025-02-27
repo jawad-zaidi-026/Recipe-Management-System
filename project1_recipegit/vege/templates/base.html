@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary">
+      <form class="container-fluid justify-content-start">
+        {% block navbar %}{% endblock %}
+      </form>
+    </nav>
+  
+    {% block content %}
+    <h1>This is the base file</h1>
+    {% endblock %}
+  </body>
+</html>
