@@ -2,13 +2,13 @@
 A full-stack Django web app with 5+ core features, including user authentication, encrypted passwords, CRUD operations, search, and image uploads. Built with Bootstrap for a responsive UI.
 
 
-->Recipe Management System
+#Recipe Management System
 
-->Description
+#Description
 
 A full-stack Django web application that allows users to add, edit, delete, and search recipes. Features user authentication, password encryption, and image uploads for enhanced functionality. Designed with Bootstrap for a seamless UI.
 
-->Tech Stack
+#Tech Stack
 
 -Backend: Django, Python
 
@@ -16,7 +16,7 @@ A full-stack Django web application that allows users to add, edit, delete, and 
 
 -Database: MySQL
 
-->Features
+#Features
 
 ✅ Secure login & registration with encrypted passwords
 ✅ CRUD operations for managing recipes
@@ -24,27 +24,27 @@ A full-stack Django web application that allows users to add, edit, delete, and 
 ✅ Search functionality for quick access
 ✅ Responsive UI with Bootstrap
 
-->Installation Guide
+#Installation Guide
 
-->Clone the repository:
+#Clone the repository:
 
 git clone <repo-link>
 cd recipe-management
 
-->Create a virtual environment and activate it:
+#Create a virtual environment and activate it:
 
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-->Install dependencies:
+#Install dependencies:
 
 pip install -r requirements.txt
 
-Run migrations:
+#Run migrations:
 
 python manage.py migrate
 
-Start the development server:
+#Start the development server:
 
 python manage.py runserver
 
